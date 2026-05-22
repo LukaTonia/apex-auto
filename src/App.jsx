@@ -13,7 +13,7 @@ function App() {
     return () => clearInterval(timer);
   }, []);
 
-  // --- YOUR HTML ---
+
   return (
     <>
       <header>
@@ -24,7 +24,7 @@ function App() {
         <div className="Search-Parts">
           <span>What are you looking for?</span>
 
-          {/* Look! Just your normal HTML, no extra Javascript needed */}
+          {}
           <div className="parts" tabIndex="0">
             Tire
             <div className="options">
