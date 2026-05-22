@@ -1,0 +1,200 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family:
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    Oxygen,
+    Ubuntu,
+    Cantarell,
+    "Open Sans",
+    "Helvetica Neue",
+    sans-serif;
+}
+
+/*header*/
+
+header {
+  height: 150px;
+  width: 100%;
+  border: solid black 1px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.logo {
+  margin-top: -10px;
+  width: 350px;
+}
+
+.Search-Parts {
+  width: 50%;
+  height: 60px;
+  border: solid lightgray 2px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 0px 10px 0px 10px;
+  justify-content: center;
+}
+
+.Search-Parts span {
+  color: rgb(41, 41, 103);
+  font-weight: 700;
+  font-size: 19px;
+}
+
+.parts {
+  width: 100px;
+  height: 80%;
+  background-color: white;
+  color: rgb(41, 41, 103);
+  font-weight: 500;
+  font-size: 17px;
+  box-shadow: 0px 1px 1px 0.5px rgb(191, 188, 188);
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition:
+    background-color 0.3s ease,
+    transform 0.3s ease;
+  position: relative;
+}
+
+.parts:hover {
+  cursor: pointer;
+  background-color: rgb(243, 243, 243);
+  color: rgb(41, 41, 103);
+  transform: translateY(-1px);
+}
+
+.options {
+  display: none;
+  margin-top: 13px;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 250px;
+  height: auto;
+  background-color: white;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
+  border-radius: 10px;
+  padding: 10px;
+  z-index: 100;
+}
+
+.options p {
+  padding: 10px;
+  justify-content: flex-start;
+  margin-bottom: 5px;
+  font-size: 20px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.options.options-show {
+  display: block;
+}
+
+.options hr {
+  color: rgb(243, 243, 243);
+}
+
+.cart {
+  width: 50px;
+  cursor: pointer;
+}
+
+.login {
+  width: 120px;
+  height: 60px;
+  border: solid black 1px;
+  color: rgb(41, 41, 103);
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding: 5px;
+  font-size: 18px;
+  font-weight: 700;
+  cursor: pointer;
+  margin-left: -100px;
+  text-decoration: none;
+}
+
+.login img {
+  width: 40px;
+}
+
+.Registration {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.Registration__box {
+  width: 400px;
+  height: 500px;
+  margin-top: 30px;
+  box-shadow: 0 0 3px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  font-size: 22px;
+  font-weight: 600;
+  align-items: center;
+}
+
+.Login__text {
+  border-radius: 5px;
+  box-shadow: 0 0 2px;
+  color: white;
+  background-color: green;
+  width: 290px;
+  display: flex;
+  display: flex;
+  justify-content: center;
+  padding: 5px; 
+  margin-top: 30px; 
+  margin-bottom: 50px;
+}
+
+.Registration__input{
+  font-size: 20px;
+  font-weight: 600;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  text-align: center;
+}
+
+.Registration__input input{
+  padding: 5px;
+  margin-bottom: 5px;
+}
+
+.Registration__button {
+  margin-top:10px;
+  padding: 5px;
+  cursor: pointer;
+}
+
+.alert{
+  color: red;
+  font-size: 15px;
+  font-weight: 500;
+  margin-top: 10px;
+}
+

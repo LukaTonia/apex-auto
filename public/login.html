@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ApexAuto</title>
+    <link rel="icon" href="./media/icon.png" />
+    <link rel="stylesheet" href="./login.css" />
+  </head>
+  <body>
+    <header>
+      <a href="../index.html">
+        <img class="logo" src="../media/Logo.png" alt="" />
+      </a>
+      <div class="Search-Parts">
+        <span>What are you looking for?</span>
+
+        <div
+          class="parts"
+          onclick="ShowDiv(this)"
+          onblur="HideDiv(this)"
+          tabindex="0"
+        >
+          Tire
+          <div class="options">
+            <p>Winter</p>
+            <hr />
+            <p>Summer</p>
+            <hr />
+            <p>M+S</p>
+          </div>
+        </div>
+
+        <div
+          class="parts"
+          onclick="ShowDiv(this)"
+          onblur="HideDiv(this)"
+          tabindex="0"
+        >
+          Battery
+          <div class="options">
+            <p>Duracell</p>
+            <hr />
+            <p>Varta</p>
+            <hr />
+            <p>Bosch</p>
+            <hr />
+            <p>Optima</p>
+          </div>
+        </div>
+
+        <div
+          class="parts"
+          onclick="ShowDiv(this)"
+          onblur="HideDiv(this)"
+          tabindex="0"
+        >
+          Engine
+          <div class="options">
+            <p>Engine Oil</p>
+            <hr />
+            <p>Spark Plugs</p>
+            <hr />
+            <p>Engine Filters</p>
+            <hr />
+            <p>Coolant / Antifreeze</p>
+          </div>
+        </div>
+
+        <div
+          class="parts"
+          onclick="ShowDiv(this)"
+          onblur="HideDiv(this)"
+          tabindex="0"
+        >
+          Gear Oil
+          <div class="options">
+            <p>Motul</p>
+            <hr />
+            <p>Liqui moly</p>
+            <hr />
+            <p>Mobil</p>
+            <hr />
+            <p>Castrol</p>
+          </div>
+        </div>
+
+        <div
+          class="parts"
+          onclick="ShowDiv(this)"
+          onblur="HideDiv(this)"
+          tabindex="0"
+        >
+          Suspension
+          <div class="options">
+            <p>Control Arm</p>
+            <hr />
+            <p>Ball Joint</p>
+            <hr />
+            <p>Wheel Hub</p>
+            <hr />
+            <p>Castrol</p>
+          </div>
+        </div>
+
+        <div
+          class="parts"
+          onclick="ShowDiv(this)"
+          onblur="HideDiv(this)"
+          tabindex="0"
+        >
+          Lights
+          <div class="options">
+            <p>Philips</p>
+            <hr />
+            <p>Osram</p>
+            <hr />
+            <p>Hella</p>
+          </div>
+        </div>
+      </div>
+
+      <img class="cart" src="../media/cart.svg" alt="" />
+
+      <a href="login.html" class="login">
+        <span>Log In</span>
+        <img src="../media/login.svg" alt="" />
+      </a>
+    </header>
+
+    <div class="Registration">
+      <div class="Registration__box">
+        <p class="Login__text">Log in</p>
+        
+        <div class="Registration__input">
+          <span>Username:</span>
+          <input class="js-user" type="text" placeholder="Name:" />
+        </div>
+        
+        <div class="Registration__input">
+          <span>Password:</span>
+          <input class="js-password" type="password" placeholder="Password"/>
+        </div>
+
+        <div class="Registration__input">
+          <span>Confirm Password:</span>
+          <input class="js-confirmation" type="password" placeholder="Password"/>
+        </div>
+
+        <button class="Registration__button" onclick="LogIn()">Confirm</button>
+        
+        <p class="alert"></p>
+      
+      </div>
+    </div>
+
+    <script src="./login.js"></script>
+  </body>
+</html>
