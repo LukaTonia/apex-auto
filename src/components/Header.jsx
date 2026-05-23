@@ -1,114 +1,36 @@
-function Header() {
+export default function Header({ cartCount, onCartOpen, searchQuery, setSearchQuery }) {
   return (
-    <header>
-      <a href="/">
-        <img className="logo" src="/media/Logo.png" alt="ApexAuto Logo" />
-      </a>
+    <header className="site-header">
+      <div className="header-inner">
+        <a href="/">
+          <img className="logo" src="/media/Logo.png" alt="ApexAuto Logo" />
+        </a>
 
-      <div className="Search-Parts">
-        <span>What are you looking for?</span>
-
-        <div className="parts" tabIndex="0">
-          Tire
-          <div className="options">
-            <p>Winter</p>
-            <hr />
-            <p>Summer</p>
-            <hr />
-            <p>M+S</p>
-          </div>
+        {/* The Search Bar */}
+        <div className="search-wrap">
+          <input
+            type="text"
+            className="search-input"
+            placeholder="Search tires, batteries, oil, etc..."
+            value={searchQuery}
+            onChange={(e) => setSearchQuery(e.target.value)}
+          />
         </div>
 
-        <div className="parts" tabIndex="0">
-          Battery
-          <div className="options">
-            <p>Duracell</p>
-            <hr />
-            <p>Varta</p>
-            <hr />
-            <p>Bosch</p>
-            <hr />
-            <p>Optima</p>
+        <div className="header-actions">
+          {/* The Cart */}
+          <div className="cart-wrapper" onClick={onCartOpen}>
+            <img src="/media/cart.svg" alt="Cart" />
+            {cartCount > 0 && <span className="cart-badge">{cartCount}</span>}
           </div>
-        </div>
 
-        <div className="parts" tabIndex="0">
-          Engine
-          <div className="options">
-            <p>Engine Oil</p>
-            <hr />
-            <p>Spark Plugs</p>
-            <hr />
-            <p>Engine Filters</p>
-            <hr />
-            <p>Coolant / Antifreeze</p>
-          </div>
-        </div>
-
-        <div className="parts" tabIndex="0">
-          Gear Oil
-          <div className="options">
-            <p>Motul</p>
-            <hr />
-            <p>Liqui moly</p>
-            <hr />
-            <p>Mobil</p>
-            <hr />
-            <p>Castrol</p>
-          </div>
-        </div>
-
-        <div className="parts" tabIndex="0">
-          Suspension
-          <div className="options">
-            <p>
-              <a href="/login.html" style={{ textDecoration: 'none', color: 'inherit' }}>
-                Control Arm
-              </a>
-            </p>
-            <hr />
-            <p>
-              <a href="/login.html" style={{ textDecoration: 'none', color: 'inherit' }}>
-                Ball Joint
-              </a>
-            </p>
-            <hr />
-            <p>
-              <a href="/login.html" style={{ textDecoration: 'none', color: 'inherit' }}>
-                Wheel Hub
-              </a>
-            </p>
-            <hr />
-            <p>
-              <a href="/login.html" style={{ textDecoration: 'none', color: 'inherit' }}>
-                Bushing
-              </a>
-            </p>
-          </div>
-        </div>
-
-        <div className="parts" tabIndex="0">
-          Lights
-          <div className="options">
-            <p>Philips</p>
-            <hr />
-            <p>Osram</p>
-            <hr />
-            <p>Hella</p>
-          </div>
+          {/* Login Button */}
+          <a href="/login.html" className="login-btn">
+            <img src="/media/login.svg" alt="Login icon" />
+            <span>Log In</span>
+          </a>
         </div>
       </div>
-
-      <a href="/login.html">
-        <img className="cart" src="/media/cart.svg" alt="Cart" />
-      </a>
-
-      <a href="/login.html" className="login">
-        <span>Log In</span>
-        <img src="/media/login.svg" alt="Login icon" />
-      </a>
     </header>
   );
 }
-
-export default Header;
