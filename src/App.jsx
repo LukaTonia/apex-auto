@@ -36,13 +36,13 @@ function App() {
 
   // --- YOUR DATA (All in one place, very easy to edit) ---
   const allProducts = [
-    { id: 1, name: "Brake Rotor", category: "Brakes", price: 76.00, section: "bestSales", img: "/media/slider1.png" },
-    { id: 2, name: "Performance Tire", category: "Tires", price: 120.00, section: "bestSales", img: "/media/slider2.png" },
-    { id: 3, name: "Car Battery", category: "Batteries", price: 85.00, section: "bestSales", img: "/media/slider1.png" },
-    { id: 4, name: "Spark Plugs (Set of 4)", category: "Engine", price: 40.00, section: "bestSales", img: "/media/slider2.png" },
-    { id: 5, name: "LED Headlights", category: "Lighting", price: 110.00, section: "newArrivals", img: "/media/slider2.png" },
-    { id: 6, name: "Racing Steering Wheel", category: "Interior", price: 250.00, section: "newArrivals", img: "/media/slider1.png" },
-    { id: 7, name: "Sport Suspension Kit", category: "Suspension", price: 450.00, section: "newArrivals", img: "/media/slider2.png" }
+    { id: 1, name: "Brake Rotor", category: "Brakes", price: 76.00, section: "bestSales", img: "./media/slider1.png" },
+    { id: 2, name: "Performance Tire", category: "Tires", price: 120.00, section: "bestSales", img: "./media/slider2.png" },
+    { id: 3, name: "Car Battery", category: "Batteries", price: 85.00, section: "bestSales", img: ".media/slider1.png" },
+    { id: 4, name: "Spark Plugs (Set of 4)", category: "Engine", price: 40.00, section: "bestSales", img: "./media/slider2.png" },
+    { id: 5, name: "LED Headlights", category: "Lighting", price: 110.00, section: "newArrivals", img: "./media/slider2.png" },
+    { id: 6, name: "Racing Steering Wheel", category: "Interior", price: 250.00, section: "newArrivals", img: "./media/slider1.png" },
+    { id: 7, name: "Sport Suspension Kit", category: "Suspension", price: 450.00, section: "newArrivals", img: "./media/slider2.png" }
   ];
 
   // Filters the array based on what the user typed in the header!

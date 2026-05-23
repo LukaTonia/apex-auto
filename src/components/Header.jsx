@@ -3,7 +3,7 @@ export default function Header({ cartCount, onCartOpen, searchQuery, setSearchQu
     <header className="site-header">
       <div className="header-inner">
         <a href="/">
-          <img className="logo" src="/media/Logo.png" alt="ApexAuto Logo" />
+          <img className="logo" src="./media/Logo.png" alt="ApexAuto Logo" />
         </a>
 
         {/* The Search Bar */}
@@ -20,13 +20,13 @@ export default function Header({ cartCount, onCartOpen, searchQuery, setSearchQu
         <div className="header-actions">
           {/* The Cart */}
           <div className="cart-wrapper" onClick={onCartOpen}>
-            <img src="/media/cart.svg" alt="Cart" />
+            <img src="./media/cart.svg" alt="Cart" />
             {cartCount > 0 && <span className="cart-badge">{cartCount}</span>}
           </div>
 
           {/* Login Button */}
-          <a href="/login.html" className="login-btn">
-            <img src="/media/login.svg" alt="Login icon" />
+          <a href="./login.html" className="login-btn">
+            <img src="./media/login.svg" alt="Login icon" />
             <span>Log In</span>
           </a>
         </div>
