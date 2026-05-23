@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import './index.css';
 import Header from './components/Header.jsx';
-import Footer from './components/Footer.jsx';
+
 
 function App() {
   // --- SLIDER LOGIC ---
@@ -25,8 +25,6 @@ function App() {
           <img className="js-slider-image" src={photos[slideIndex]} alt="Slider" />
         </div>
       </main>
-
-      <Footer />
     </>
   );
 }
