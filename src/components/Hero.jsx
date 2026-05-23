@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 
 export default function Hero() {
-  const photos = ['/media/slider1.png', '/media/slider2.png'];
+  const photos = ['./media/slider1.png', './media/slider2.png'];
   const [slideIndex, setSlideIndex] = useState(0);
 
   useEffect(() => {
