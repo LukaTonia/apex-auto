@@ -36,13 +36,17 @@ function App() {
 
   // საიტის დატა
   const allProducts = [
-    { id: 1, name: "GOODYEAR EAGLE SPORT 2 235/60R18 ზაფხული (საბურავი)", category: "Tires", price: 600, section: "bestSales", img: "./media/1.jpg" },
-    { id: 2, name: "GOODYEAR EAGLE SPORT 2 215/65R17 ზაფხული (საბურავი)", category: "Tires", price: 600, section: "bestSales", img: "./media/2.jpg" },
-    { id: 3, name: "GOODYEAR EAGLE SPORT 2 225/55R17 ზაფხული (საბურავი)", category: "Tires", price: 525, section: "bestSales", img: ".media/slider1.png" },
-    { id: 4, name: "Spark Plugs (Set of 4)", category: "Engine", price: 40.00, section: "bestSales", img: "./media/slider2.png" },
-    { id: 5, name: "LED Headlights", category: "Lighting", price: 110.00, section: "newArrivals", img: "./media/slider2.png" },
-    { id: 6, name: "Racing Steering Wheel", category: "Interior", price: 250.00, section: "newArrivals", img: "./media/slider1.png" },
-    { id: 7, name: "Sport Suspension Kit", category: "Suspension", price: 450.00, section: "newArrivals", img: "./media/slider2.png" }
+    { id: 1, name: "GOODYEAR EAGLE SPORT 2 235/60R18 ზაფხული (საბურავი)", category: "Tires", price: 600, section: "საბურავები", img: "./media/1.jpg" },
+    { id: 2, name: "GOODYEAR EAGLE SPORT 2 215/65R17 ზაფხული (საბურავი)", category: "Tires", price: 600, section: "საბურავები", img: "./media/2.jpg" },
+    { id: 3, name: "GOODYEAR EAGLE SPORT 2 225/55R17 ზაფხული (საბურავი)", category: "Tires", price: 525, section: "საბურავები", img: "./media/slider1.png" },
+    { id: 4, name: "GOODYEAR EAGLE SPORT 2 225/55R17 ზაფხული (საბურავი)", category: "Tires", price: 525, section: "საბურავები", img: "./media/slider1.png" },
+    { id: 5, name: "GOODYEAR EAGLE SPORT 2 225/55R17 ზაფხული (საბურავი)", category: "Tires", price: 525, section: "საბურავები", img: "./media/slider1.png" },
+    { id: 6, name: "GOODYEAR EAGLE SPORT 2 225/55R17 ზაფხული (საბურავი)", category: "Tires", price: 525, section: "საბურავები", img: "./media/slider1.png" },
+    { id: 7, name: "GOODYEAR EAGLE SPORT 2 225/55R17 ზაფხული (საბურავი)", category: "Tires", price: 525, section: "საბურავები", img: "./media/slider1.png" },
+    { id: 8, name: "Spark Plugs (Set of 4)", category: "Engine", price: 40.00, section: "საბურავები", img: "./media/slider2.png" },
+    { id: 9, name: "LED Headlights", category: "Lighting", price: 110.00, section: "საბურავები", img: "./media/slider2.png" },
+    { id: 10, name: "Racing Steering Wheel", category: "Interior", price: 250.00, section: "საბურავები", img: "./media/slider1.png" },
+    { id: 11, name: "Sport Suspension Kit", category: "Suspension", price: 450.00, section: "საბურავები", img: "./media/slider2.png" }
   ];
 
   // Filters the array based on what the user typed in the header!
@@ -77,12 +81,13 @@ function App() {
           </div>
         ) : (
           /* If the search bar is empty show the normal website (Hero + Sliders) */
-          <>
+            <>
+              /* პროდუქციის სლაიდერები */
             <Hero />
             
             <ProductSlider 
-              title="Best Sales" 
-              items={allProducts.filter(p => p.section === "bestSales")} 
+              title="საბურავები" 
+              items={allProducts.filter(p => p.section === "საბურავები")} 
               addToCart={handleAddToCart} 
             />
             
