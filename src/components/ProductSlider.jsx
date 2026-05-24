@@ -8,12 +8,9 @@ export default function ProductSlider({ title, items, addToCart }) {
     const el = sliderRef.current;
     if (!el) return;
 
-    const scrollAmount = direction;
-    if (direction === 'left') {
-  scrollAmount = -300;
-} else {
-  scrollAmount = 300;
-}
+    // BUG FIX: Used 'let' instead of 'const' so the number can change!
+    let scrollAmount = direction === 'left' ? -300 : 300;
+    
     if (typeof el.scrollBy === 'function') {
       el.scrollBy({ left: scrollAmount, behavior: 'smooth' });
     } else {
@@ -27,9 +24,19 @@ export default function ProductSlider({ title, items, addToCart }) {
     <div className="slider-section">
       <div className="slider-header">
         <h2>{title}</h2>
+        
+        {/* The New SVG Arrows! */}
         <div style={{ display: 'flex', gap: '10px' }}>
-          <button onClick={() => scroll('left')} style={{ padding: '5px 15px', cursor: 'pointer', background: 'var(--bg-gray)', border: '1px solid var(--border-color)', borderRadius: '5px' }}>{"<"}</button>
-          <button onClick={() => scroll('right')} style={{ padding: '5px 15px', cursor: 'pointer', background: 'var(--bg-gray)', border: '1px solid var(--border-color)', borderRadius: '5px' }}>{">"}</button>
+          <button onClick={() => scroll('left')} className="slider-arrow-btn" aria-label="Scroll left">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <polyline points="15 18 9 12 15 6"></polyline>
+            </svg>
+          </button>
+          <button onClick={() => scroll('right')} className="slider-arrow-btn" aria-label="Scroll right">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <polyline points="9 18 15 12 9 6"></polyline>
+            </svg>
+          </button>
         </div>
       </div>
 
