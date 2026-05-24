@@ -80,9 +80,10 @@ function App() {
             )}
           </div>
         ) : (
-          /* If the search bar is empty show the normal website (Hero + Sliders) */
+            /* If the search bar is empty show the normal website (Hero + Sliders) */
+            
             <>
-              /* პროდუქციის სლაიდერები */
+            
             <Hero />
             
             <ProductSlider 
