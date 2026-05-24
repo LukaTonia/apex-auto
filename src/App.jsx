@@ -6,13 +6,13 @@ import Hero from './components/Hero.jsx';
 import ProductSlider from './components/ProductSlider.jsx';
 import CartPanel from './components/CartPanel.jsx';
 import Footer from './components/Footer.jsx';
-import ProductCard from './components/ProductCard.jsx'; // We use this for search results
+import ProductCard from './components/ProductCard.jsx'; // this is  used  for search results
 
 function App() {
   const [cart, setCart] = useState([]);
   const [isCartOpen, setIsCartOpen] = useState(false);
   
-  // --- SEARCH LOGIC ---
+  //  SEARCH LOGIC
   const [searchQuery, setSearchQuery] = useState('');
 
   const handleAddToCart = (product) => {
@@ -34,11 +34,11 @@ function App() {
   const removeItem = (id) => setCart(cart.filter(item => item.id !== id));
   const cartCount = cart.reduce((total, item) => total + item.quantity, 0);
 
-  // --- YOUR DATA (All in one place, very easy to edit) ---
+  // საიტის დატა
   const allProducts = [
     { id: 1, name: "GOODYEAR EAGLE SPORT 2 235/60R18 ზაფხული (საბურავი)", category: "Tires", price: 600, section: "bestSales", img: "./media/1.jpg" },
     { id: 2, name: "GOODYEAR EAGLE SPORT 2 215/65R17 ზაფხული (საბურავი)", category: "Tires", price: 600, section: "bestSales", img: "./media/2.jpg" },
-    { id: 3, name: "Car Battery", category: "Batteries", price: 85.00, section: "bestSales", img: ".media/slider1.png" },
+    { id: 3, name: "GOODYEAR EAGLE SPORT 2 225/55R17 ზაფხული (საბურავი)", category: "Tires", price: 525, section: "bestSales", img: ".media/slider1.png" },
     { id: 4, name: "Spark Plugs (Set of 4)", category: "Engine", price: 40.00, section: "bestSales", img: "./media/slider2.png" },
     { id: 5, name: "LED Headlights", category: "Lighting", price: 110.00, section: "newArrivals", img: "./media/slider2.png" },
     { id: 6, name: "Racing Steering Wheel", category: "Interior", price: 250.00, section: "newArrivals", img: "./media/slider1.png" },
@@ -76,7 +76,7 @@ function App() {
             )}
           </div>
         ) : (
-          /* If the search bar is empty, show the normal website (Hero + Sliders) */
+          /* If the search bar is empty show the normal website (Hero + Sliders) */
           <>
             <Hero />
             

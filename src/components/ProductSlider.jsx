@@ -8,7 +8,12 @@ export default function ProductSlider({ title, items, addToCart }) {
     const el = sliderRef.current;
     if (!el) return;
 
-    const scrollAmount = direction === 'left' ? -300 : 300;
+    const scrollAmount = direction;
+    if (direction === 'left') {
+  scrollAmount = -300;
+} else {
+  scrollAmount = 300;
+}
     if (typeof el.scrollBy === 'function') {
       el.scrollBy({ left: scrollAmount, behavior: 'smooth' });
     } else {

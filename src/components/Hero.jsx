@@ -13,7 +13,7 @@ export default function Hero() {
 
   return (
     <section className="hero-section">
-      {/* Your Original Slider */}
+      {/* main Slider */}
       <div className="hero-slider">
         <img src={photos[slideIndex]} alt="Promotional Slider" />
       </div>

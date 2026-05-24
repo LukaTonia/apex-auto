@@ -6,7 +6,7 @@ export default function Header({ cartCount, onCartOpen, searchQuery, setSearchQu
           <img className="logo" src="./media/Logo.png" alt="ApexAuto Logo" />
         </a>
 
-        {/* The Search Bar */}
+        {/*  Search Bar */}
         <div className="search-wrap">
           <input
             type="text"
@@ -18,7 +18,7 @@ export default function Header({ cartCount, onCartOpen, searchQuery, setSearchQu
         </div>
 
         <div className="header-actions">
-          {/* The Cart */}
+          {/*  Cart */}
           <div className="cart-wrapper" onClick={onCartOpen}>
             <img src="./media/cart.svg" alt="Cart" />
             {cartCount > 0 && <span className="cart-badge">{cartCount}</span>}
