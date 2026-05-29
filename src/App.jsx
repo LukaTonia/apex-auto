@@ -46,7 +46,7 @@ function App() {
     { id: 8, name: "Spark Plugs (Set of 4)", category: "Tires", price : 40, section: "Engine", img: "./media/8.jpg" },
     { id: 9, name: "LED Headlights", category: "Lighting", price: 110 , section: "Lighting", img: "./media/9.png" },
     { id: 10, name: "Racing Steering Wheel", category: "Interior", price: 250.00, section: "Interior", img: "./media/10.png" },
-    { id: 11, name: "Sport Suspension Kit", category: "Suspension", price: 450.00, section: "Suspension", img: "./media/11.png" }
+    { id: 11, name: "Sport Suspension Kit", category: "Suspension", price: 450.00, section: "Batteries", img: "./media/11.png" }
   ];
 
   // Filters the array based on what the user typed in the header!
@@ -93,8 +93,8 @@ function App() {
             />
             
             <ProductSlider 
-              title="New Arrivals" 
-              items={allProducts.filter(p => p.section === "New Arrivals")} 
+              title="Batteries" 
+              items={allProducts.filter(p => p.section === "Batteries")} 
               addToCart={handleAddToCart} 
             />
           </>
