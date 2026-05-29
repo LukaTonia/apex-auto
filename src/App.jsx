@@ -40,12 +40,12 @@ function App() {
     { id: 2, name: "GOODYEAR EAGLE SPORT 2 215/65R17 ზაფხული (საბურავი)", category: "Tires", price: 600, section: "Tires", img: "./media/2.jpg" },
     { id: 3, name: "GOODYEAR EAGLE SPORT 2 225/55R17 ზაფხული (საბურავი)", category: "Tires", price: 525, section: "Tires", img: "./media/3.jpg" },
     { id: 4, name: "TOYO PROXES SPORT 2 295/40R22 ზაფხული (საბურავი)", category: "Tires", price: 1200, section: "Tires", img: "./media/4.jpg" },
-    { id: 5, name: "GOODYEAR EAGLE SPORT 2 225/55R17 ზაფხული (საბურავი)", category: "Tires", price: 525, section: "Tires", img: "./media/5.jpg" },
-    { id: 6, name: "GOODYEAR EAGLE SPORT 2 225/55R17 ზაფხული (საბურავი)", category: "Tires", price: 525, section: "Tires", img: "./media/6.jpg" },
-    { id: 7, name: "GOODYEAR EAGLE SPORT 2 225/55R17 ზაფხული (საბურავი)", category: "Tires", price: 525, section: "Tires", img: "./media/7.jpg" },
-    { id: 8, name: "Spark Plugs (Set of 4)", category: "Tires", price : 40, section: "Engine", img: "./media/8.jpg" },
-    { id: 9, name: "LED Headlights", category: "Lighting", price: 110 , section: "Lighting", img: "./media/9.png" },
-    { id: 10, name: "Racing Steering Wheel", category: "Interior", price: 250.00, section: "Interior", img: "./media/10.png" },
+    { id: 5, name: "MICHELIN PILOT SPORT EV (AO) 265/40R20 ზაფხული (საბურავი)", category: "Tires", price: 1080, section: "Tires", img: "./media/5.jpg" },
+    { id: 6, name: "MICHELIN PILOT SPORT 4S 275/35R21 ზაფხული (საბურავი)", category: "Tires", price: 2340, section: "Tires", img: "./media/6.png" },
+    { id: 7, name: "PIRELLI P ZERO (J) (LR) 265/40R22 ზაფხული (საბურავი)", category: "Tires", price: 1240, section: "Tires", img: "./media/7.jpg" },
+    { id: 8, name: "PIRELLI PZERO WINTER 245/40R20 ზამთარი (საბურავი)", category: "Tires", price : 1300, section: "Tires", img: "./media/8.jpg" },
+    { id: 9, name: "CONTINENTAL WINTERCONTACT 255/60R20 ზამთარი (საბურავი)", category: "Tires", price: 110 , section: "Tires", img: "./media/9.jpg" },
+    { id: 10, name: "BRIDGESTONE TURANZA 6 255/45R20 ზაფხული (საბურავი)", category: "Tires", price: 740, section: "Tires", img: "./media/10.png" },
     { id: 11, name: "Sport Suspension Kit", category: "Suspension", price: 450.00, section: "Batteries", img: "./media/11.png" }
   ];
 
@@ -95,6 +95,11 @@ function App() {
             <ProductSlider 
               title="Batteries" 
               items={allProducts.filter(p => p.section === "Batteries")} 
+              addToCart={handleAddToCart} 
+              />
+              <ProductSlider 
+              title="Engine Oil" 
+              items={allProducts.filter(p => p.section === "Engine Oil")} 
               addToCart={handleAddToCart} 
             />
           </>
