@@ -55,7 +55,17 @@ function App() {
     { id: 17, name: "ENERGIZER EFB E72D26 72 AH", category: "Batteries", price: 465, section: "Batteries", img: "./media/17.png" },
     { id: 18, name: "MACPOWER PR 95 AH AGM", category: "Batteries", price: 649, section: "Batteries", img: "./media/18.png" },
     { id: 19, name: "EXIDE EFB EL954 95 AH JIS", category: "Batteries", price: 460, section: "Batteries", img: "./media/19.png" },
-    { id: 20, name: "FIAMM BT D31X 95 AH JIS", category: "Batteries", price: 379, section: "Batteries", img: "./media/20.png" }
+    { id: 20, name: "FIAMM BT D31X 95 AH JIS", category: "Batteries", price: 379, section: "Batteries", img: "./media/20.png" },
+    { id: 21, name: "Mobil 1ESP X2 0W20 5L (ENGINE OIL)", category: "Engine Oil", price: 265, section: "Engine Oil", img: "./media/21.jpg" },
+    { id: 22, name: "Mobil Super 3000 Formula R 5W30 5L (ENGINE OIL)", category: "Engine Oil", price: 130, section: "Engine Oil", img: "./media/22.jpg" },
+    { id: 23, name: "Mobil Super 3000 Formula P 0W20 5L (ENGINE OIL)", category: "Engine Oil", price: 195, section: "Engine Oil", img: "./media/23.jpg" },
+    { id: 24, name: "Mobil 1FS 5W40 1L (ENGINE OIL)", category: "Engine Oil", price: 45, section: "Engine Oil", img: "./media/24.jpg" },
+    { id: 25, name: "Mobil Super 3000 Formula OV 0W20 1L (ENGINE OIL)", category: "Engine Oil", price: 40, section: "Engine Oil", img: "./media/25.jpg" },
+    { id: 26, name: "Shell Helix Ultra ECT C2/C3 0W30 5L (ENGINE OIL)", category: "Engine Oil", price: 235, section: "Engine Oil", img: "./media/26.jpg" },
+    { id: 27, name: "Shell Helix HX8 ECT C3 5W30 5L (ENGINE OIL)", category: "Engine Oil", price: 170, section: "Engine Oil", img: "./media/27.jpg" },
+    { id: 28, name: "Shell Helix Ultra Prof. AR-L 0W16 1L (ENGINE OIL)", category: "Engine Oil", price: 40, section: "Engine Oil", img: "./media/28.jpg" },
+    { id: 29, name: "MOTUL 8100 ECO-LITE 5W30 4L ENGINE OIL", category: "Engine Oil", price: 168, section: "Engine Oil", img: "./media/29.png" },
+    { id: 30, name: "PETRONAS SYNT. 800 EU 10W40 SN 4L", category: "Engine Oil", price: 104, section: "Engine Oil", img: "./media/30.png" },
   ];
 
   // Filters the array based on what the user typed in the header!
