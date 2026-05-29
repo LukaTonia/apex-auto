@@ -66,6 +66,19 @@ function App() {
     { id: 28, name: "Shell Helix Ultra Prof. AR-L 0W16 1L (ENGINE OIL)", category: "Engine Oil", price: 40, section: "Engine Oil", img: "./media/28.jpg" },
     { id: 29, name: "MOTUL 8100 ECO-LITE 5W30 4L ENGINE OIL", category: "Engine Oil", price: 168, section: "Engine Oil", img: "./media/29.png" },
     { id: 30, name: "PETRONAS SYNT. 800 EU 10W40 SN 4L", category: "Engine Oil", price: 104, section: "Engine Oil", img: "./media/30.png" },
+    { id: 31, name: "PETRONAS SYNT. 800 EU 10W40 SN 4L", category: "Brake Pads", price: 104, section: "Brake Pads", img: "./media/30.png" },
+    { id: 32, name: "PETRONAS SYNT. 800 EU 10W40 SN 4L", category: "Brake Pads", price: 104, section: "Brake Pads", img: "./media/30.png" },
+    { id: 33, name: "PETRONAS SYNT. 800 EU 10W40 SN 4L", category: "Brake Pads", price: 104, section: "Brake Pads", img: "./media/30.png" },
+    { id: 34, name: "PETRONAS SYNT. 800 EU 10W40 SN 4L", category: "Brake Pads", price: 104, section: "Brake Pads", img: "./media/30.png" },
+    { id: 35, name: "PETRONAS SYNT. 800 EU 10W40 SN 4L", category: "Brake Pads", price: 104, section: "Brake Pads", img: "./media/30.png" },
+    { id: 36, name: "PETRONAS SYNT. 800 EU 10W40 SN 4L", category: "Brake Pads", price: 104, section: "Brake Pads", img: "./media/30.png" },
+    { id: 37, name: "PETRONAS SYNT. 800 EU 10W40 SN 4L", category: "Brake Pads", price: 104, section: "Brake Pads", img: "./media/30.png" },
+    { id: 38, name: "PETRONAS SYNT. 800 EU 10W40 SN 4L", category: "Brake Pads", price: 104, section: "Brake Pads", img: "./media/30.png" },
+    { id: 39, name: "PETRONAS SYNT. 800 EU 10W40 SN 4L", category: "Brake Pads", price: 104, section: "Brake Pads", img: "./media/30.png" },
+    { id: 40, name: "PETRONAS SYNT. 800 EU 10W40 SN 4L", category: "Brake Pads", price: 104, section: "Brake Pads", img: "./media/30.png" },
+    
+    
+             
   ];
 
   // Filters the array based on what the user typed in the header!
@@ -119,6 +132,11 @@ function App() {
               <ProductSlider 
               title="Engine Oil" 
               items={allProducts.filter(p => p.section === "Engine Oil")} 
+              addToCart={handleAddToCart} 
+              />
+              <ProductSlider 
+              title="Brake Pads" 
+              items={allProducts.filter(p => p.section === "Brake Pads")} 
               addToCart={handleAddToCart} 
             />
           </>
