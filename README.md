@@ -1,16 +1,6 @@
-# React + Vite
+## ⚖️ Legal & Educational Disclaimer
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
-
-## React Compiler
-
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+**This is a student project created solely for educational purposes.** ApexAuto is a fictional e-commerce platform developed for a university Front-End Development course. 
+* We do not sell any real products.
+* We do not process real transactions or collect real user data.
+* **Trademark Notice:** All company names, brand names, trademarks, and logos (e.g., Goodyear, Michelin, BMW, Toyota) mentioned or displayed on this website are the property of their respective owners. Their use in this project is strictly for educational demonstration under the Fair Use doctrine and does not imply any affiliation with, or endorsement by, these companies.
