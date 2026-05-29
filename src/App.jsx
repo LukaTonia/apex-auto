@@ -46,7 +46,16 @@ function App() {
     { id: 8, name: "PIRELLI PZERO WINTER 245/40R20 ზამთარი (საბურავი)", category: "Tires", price : 1300, section: "Tires", img: "./media/8.jpg" },
     { id: 9, name: "CONTINENTAL WINTERCONTACT 255/60R20 ზამთარი (საბურავი)", category: "Tires", price: 110 , section: "Tires", img: "./media/9.jpg" },
     { id: 10, name: "BRIDGESTONE TURANZA 6 255/45R20 ზაფხული (საბურავი)", category: "Tires", price: 740, section: "Tires", img: "./media/10.png" },
-    { id: 11, name: "Sport Suspension Kit", category: "Suspension", price: 450.00, section: "Batteries", img: "./media/11.png" }
+    { id: 11, name: "VARTA DYN AGM A5 95 AH", category: "Batteries", price: 750, section: "Batteries", img: "./media/11.jpg" },
+    { id: 12, name: "VARTA EFB N72 72 AH JIS", category: "Batteries", price: 475, section: "Batteries", img: "./media/12.jpg" },
+    { id: 13, name: "VARTA BLU G7 95 AH JIS", category: "Batteries", price: 440, section: "Batteries", img: "./media/13.jpg" },
+    { id: 14, name: "VARTA DYN AGM A7 70 AH", category: "Batteries", price: 540, section: "Batteries", img: "./media/14.jpg" },
+    { id: 15, name: "Duracell DE70 EFB 70 Ah. D26L", category: "Batteries", price: 480.00, section: "Batteries", img: "./media/15.jpg" },
+    { id: 16, name: "ENERGIZER AGM EA70L3 70 AH", category: "Batteries", price: 530, section: "Batteries", img: "./media/16.png" },
+    { id: 17, name: "ENERGIZER EFB E72D26 72 AH", category: "Batteries", price: 465, section: "Batteries", img: "./media/17.png" },
+    { id: 18, name: "MACPOWER PR 95 AH AGM", category: "Batteries", price: 649, section: "Batteries", img: "./media/18.png" },
+    { id: 19, name: "EXIDE EFB EL954 95 AH JIS", category: "Batteries", price: 460, section: "Batteries", img: "./media/19.png" },
+    { id: 20, name: "FIAMM BT D31X 95 AH JIS", category: "Batteries", price: 379, section: "Batteries", img: "./media/20.png" }
   ];
 
   // Filters the array based on what the user typed in the header!
