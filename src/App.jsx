@@ -36,17 +36,17 @@ function App() {
 
   // საიტის დატა
   const allProducts = [
-    { id: 1, name: "GOODYEAR EAGLE SPORT 2 235/60R18 ზაფხული (საბურავი)", category: "Tires", price: 600, section: "საბურავები", img: "./media/1.jpg" },
-    { id: 2, name: "GOODYEAR EAGLE SPORT 2 215/65R17 ზაფხული (საბურავი)", category: "Tires", price: 600, section: "საბურავები", img: "./media/2.jpg" },
-    { id: 3, name: "GOODYEAR EAGLE SPORT 2 225/55R17 ზაფხული (საბურავი)", category: "Tires", price: 525, section: "საბურავები", img: "./media/slider1.png" },
-    { id: 4, name: "GOODYEAR EAGLE SPORT 2 225/55R17 ზაფხული (საბურავი)", category: "Tires", price: 525, section: "საბურავები", img: "./media/slider1.png" },
-    { id: 5, name: "GOODYEAR EAGLE SPORT 2 225/55R17 ზაფხული (საბურავი)", category: "Tires", price: 525, section: "საბურავები", img: "./media/slider1.png" },
-    { id: 6, name: "GOODYEAR EAGLE SPORT 2 225/55R17 ზაფხული (საბურავი)", category: "Tires", price: 525, section: "საბურავები", img: "./media/slider1.png" },
-    { id: 7, name: "GOODYEAR EAGLE SPORT 2 225/55R17 ზაფხული (საბურავი)", category: "Tires", price: 525, section: "საბურავები", img: "./media/slider1.png" },
-    { id: 8, name: "Spark Plugs (Set of 4)", category: "Engine", price: 40.00, section: "საბურავები", img: "./media/slider2.png" },
-    { id: 9, name: "LED Headlights", category: "Lighting", price: 110.00, section: "საბურავები", img: "./media/slider2.png" },
-    { id: 10, name: "Racing Steering Wheel", category: "Interior", price: 250.00, section: "საბურავები", img: "./media/slider1.png" },
-    { id: 11, name: "Sport Suspension Kit", category: "Suspension", price: 450.00, section: "საბურავები", img: "./media/slider2.png" }
+    { id: 1, name: "GOODYEAR EAGLE SPORT 2 235/60R18 ზაფხული (საბურავი)", category: "Tires", price: 600, section: "Tires", img: "./media/1.jpg" },
+    { id: 2, name: "GOODYEAR EAGLE SPORT 2 215/65R17 ზაფხული (საბურავი)", category: "Tires", price: 600, section: "Tires", img: "./media/2.jpg" },
+    { id: 3, name: "GOODYEAR EAGLE SPORT 2 225/55R17 ზაფხული (საბურავი)", category: "Tires", price: 525, section: "Tires", img: "./media/3.jpg" },
+    { id: 4, name: "TOYO PROXES SPORT 2 295/40R22 ზაფხული (საბურავი)", category: "Tires", price: 1200, section: "Tires", img: "./media/4.jpg" },
+    { id: 5, name: "GOODYEAR EAGLE SPORT 2 225/55R17 ზაფხული (საბურავი)", category: "Tires", price: 525, section: "Tires", img: "./media/5.jpg" },
+    { id: 6, name: "GOODYEAR EAGLE SPORT 2 225/55R17 ზაფხული (საბურავი)", category: "Tires", price: 525, section: "Tires", img: "./media/6.jpg" },
+    { id: 7, name: "GOODYEAR EAGLE SPORT 2 225/55R17 ზაფხული (საბურავი)", category: "Tires", price: 525, section: "Tires", img: "./media/7.jpg" },
+    { id: 8, name: "Spark Plugs (Set of 4)", category: "Tires", price : 40, section: "Engine", img: "./media/8.jpg" },
+    { id: 9, name: "LED Headlights", category: "Lighting", price: 110 , section: "Lighting", img: "./media/9.png" },
+    { id: 10, name: "Racing Steering Wheel", category: "Interior", price: 250.00, section: "Interior", img: "./media/10.png" },
+    { id: 11, name: "Sport Suspension Kit", category: "Suspension", price: 450.00, section: "Suspension", img: "./media/11.png" }
   ];
 
   // Filters the array based on what the user typed in the header!
@@ -87,14 +87,14 @@ function App() {
             <Hero />
             
             <ProductSlider 
-              title="საბურავები" 
-              items={allProducts.filter(p => p.section === "საბურავები")} 
+              title="Tires" 
+              items={allProducts.filter(p => p.section === "Tires")} 
               addToCart={handleAddToCart} 
             />
             
             <ProductSlider 
               title="New Arrivals" 
-              items={allProducts.filter(p => p.section === "newArrivals")} 
+              items={allProducts.filter(p => p.section === "New Arrivals")} 
               addToCart={handleAddToCart} 
             />
           </>
