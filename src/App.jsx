@@ -81,7 +81,6 @@ function App() {
              
   ];
 
-  // Filters the array based on what the user typed in the header!
   const filteredProducts = allProducts.filter(product => 
     product.name.toLowerCase().includes(searchQuery.toLowerCase()) || 
     product.category.toLowerCase().includes(searchQuery.toLowerCase())
@@ -97,7 +96,7 @@ function App() {
       />
 
       <main>
-        {/* If the user typed something, show the search results grid */}
+        {}
         {searchQuery.length > 0 ? (
           <div className="search-results-section">
             <h2>Search Results for "{searchQuery}"</h2>
@@ -112,7 +111,6 @@ function App() {
             )}
           </div>
         ) : (
-            /* If the search bar is empty show the normal website (Hero + Sliders) */
             
             <>
             
@@ -130,7 +128,7 @@ function App() {
               addToCart={handleAddToCart} 
               />
               <ProductSlider 
-              title="Engine Oil" 
+              title="Engine Oils" 
               items={allProducts.filter(p => p.section === "Engine Oil")} 
               addToCart={handleAddToCart} 
               />
