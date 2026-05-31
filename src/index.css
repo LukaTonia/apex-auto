@@ -208,6 +208,7 @@ body {
   gap: 20px;
   overflow-x: auto;
   padding-bottom: 20px;
+  padding-top: 10px;
   scroll-snap-type: x mandatory;
   scroll-behavior: smooth;
   -webkit-overflow-scrolling: touch;
@@ -233,23 +234,22 @@ body {
   box-shadow: var(--shadow);
   border-color: var(--brand-blue);
 }
-/* Update your product card image styling */
 .product-image-wrap {
   position: relative;
-  background: white; /* Changed to white */
-  height: 220px; /* Made slightly taller to fit tires better */
+  background: white;
+  height: 220px;
   padding: 15px;
   display: flex;
   align-items: center;
   justify-content: center;
-  border-bottom: 1px solid var(--border-color); /* Adds a clean line under the image */
+  border-bottom: 1px solid var(--border-color);
 }
 
 .product-image-wrap img {
   max-width: 100%;
   max-height: 100%;
-  object-fit: contain; /* Forces the whole image to fit without cutting off edges */
-  mix-blend-mode: multiply; /* Magic trick: makes JPEG white backgrounds disappear! */
+  object-fit: contain;
+  mix-blend-mode: multiply;
 }
 .product-category {
   font-size: 12px;
