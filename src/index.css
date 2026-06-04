@@ -386,15 +386,6 @@ body {
   cursor: pointer;
 }
 
-/* ── FOOTER ── */
-.site-footer {
-  max-width: 1400px;
-  margin: 40px auto 0;
-  padding: 30px 20px;
-  border-top: 1px solid var(--border-color);
-  text-align: center;
-  color: var(--text-muted);
-}
 /* ── SLIDER ARROW BUTTONS ── */
 .slider-arrow-btn {
   width: 40px;
