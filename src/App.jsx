@@ -76,7 +76,16 @@ function App() {
     { id: 38, name: "BREMBO P36035 2214501 (Front Brake Pad)", category: "Brake Pads", price: 235, section: "Brake Pads", img: "./media/38.jpg" },
     { id: 39, name: "BREMBO P59055 2441201 (Front Brake Pad)", category: "Brake Pads", price: 126, section: "Brake Pads", img: "./media/39.jpg" },
     { id: 40, name: "BREMBO P50061 2347801 (Back Brake Pad)", category: "Brake Pads", price: 110, section: "Brake Pads", img: "./media/40.jpg" },
-    
+    { id: 41, name: "BREMBO 09A94533 (Front Brake Disc)", category: "Brake Discs", price: 1280, section: "Brake Discs", img: "./media/41.jpg" },
+    { id: 42, name: "BREMBO 09D76210 (Front Brake Disc)", category: "Brake  Discs", price: 110, section: "Brake Discs", img: "./media/42.jfif" },
+    { id: 43, name: "TEXTAR 92253925 (Back Brake Disc)", category: "Brake Discs", price: 680, section: "Brake Discs", img: "./media/43.jpg" },
+    { id: 44, name: "TEXTAR 92279805 (Front Brake Disc)", category: "Brake Discs", price: 677, section: "Brake Discs", img: "./media/44.jpg" },
+    { id: 45, name: "TEXTAR 92253825 (Front Brake Disc)", category: "Brake Discs", price: 640, section: "Brake Discs", img: "./media/45.jpg" },
+    { id: 46, name: "BREMBO 09D76311 (Back Brake Disc)", category: "Brake Discs", price: 601, section: "Brake Discs", img: "./media/46.jfif" },
+    { id: 47, name: "BREMBO 09D52813 92331105 (Front Brake Disc)", category: "Brake Discs", price: 553, section: "Brake Discs", img: "./media/47.jpg" },
+    { id: 48, name: "BREMBO 09A9211X 92139500 (Front Brake Disc)", category: "Brake Discs", price: 270, section: "Brake Discs", img: "./media/48.jpg" },
+    { id: 49, name: "BREMBO 09992511 92161105 (Back Brake Disc)", category: "Brake Discs", price: 235, section: "Brake Discs", img: "./media/49.jpg" },
+    { id: 50, name: "BREMBO 08D41811 92301403 (Back Brake Disc)", category: "Brake Discs", price: 120, section: "Brake Discs", img: "./media/50.jpg" },
     
              
   ];
@@ -135,6 +144,11 @@ function App() {
               <ProductSlider 
               title="Brake Pads" 
               items={allProducts.filter(p => p.section === "Brake Pads")} 
+              addToCart={handleAddToCart} 
+              />
+               <ProductSlider 
+              title="Brake Discs" 
+              items={allProducts.filter(p => p.section === "Brake Discs")} 
               addToCart={handleAddToCart} 
             />
           </>
