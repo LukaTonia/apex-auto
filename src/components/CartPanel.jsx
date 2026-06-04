@@ -31,7 +31,7 @@ export default function CartPanel({ isOpen, onClose, cartItems, onUpdateQty, onR
                     <button style={{color: 'red', border: 'none', background: 'none'}} onClick={() => onRemove(item.id)}>Remove</button>
                   </div>
                 </div>
-                <strong>${(item.price * item.quantity).toFixed(2)}</strong>
+                <strong>&#8382;{(item.price * item.quantity).toFixed(2)}</strong>
               </div>
             ))
           )}
@@ -40,7 +40,7 @@ export default function CartPanel({ isOpen, onClose, cartItems, onUpdateQty, onR
         <div className="cart-panel-footer">
           <div style={{display: 'flex', justifyContent: 'space-between', marginBottom: '15px', fontSize: '20px'}}>
             <span>Total:</span>
-            <strong>${cartTotal.toFixed(2)}</strong>
+            <strong>&#8382;{cartTotal.toFixed(2)}</strong>
           </div>
           <button className="btn-checkout">Checkout</button>
         </div>
