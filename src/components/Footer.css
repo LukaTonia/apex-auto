@@ -4,66 +4,45 @@
   padding: 0;
 }
 
-footer {
+footer.site-footer {
   width: 100%;
-  height: auto;
-  box-shadow: 0 0 2px 0.5px;
+  padding: 40px 20px 20px;
+  box-shadow: 0 0 2px 0.5px rgba(0, 0, 0, 0.1);
   display: flex;
-  align-items: center;
-  gap: 100px;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 2rem;
   flex-wrap: wrap;
+  background-color: #f9f9fb;
 }
 
 .sponsor-logos {
   display: flex;
-  gap: 10px;
+  justify-content: center;
   align-items: center;
-  width: auto;
-  margin-left: 265px;
+  width: 100%;
+  max-width: 280px;
+  margin: 0 auto;
 }
 
 .Logo {
-  width: 255px;
-  height: 255px;
-  display: flex;
+  width: 220px;
+  height: 220px;
   animation: fadeIn 0.6s ease-in-out;
-  border: solid rgb(60, 60, 140) 3px;
+  border: 3px solid rgb(60, 60, 140);
   border-radius: 50%;
-  margin-top: 20px;
 }
 
-.contact-us p {
-  margin-top: 15px;
-  font-size: 20px;
-  color: black;
-  transition: all 0.3s ease-in-out;
-  transform-origin: left;
+.contact-us,
+.working-hours,
+.why-us {
+  min-width: 220px;
+  max-width: 280px;
+  width: 100%;
 }
 
-.contact-us p:hover {
-  color: rgb(60, 60, 140);
-  cursor: pointer;
-  transform: scale(1.03);
-}
-
-.working-hours p {
-  margin-top: 15px;
-  font-size: 20px;
-  color: black;
-  transition: all 0.3s ease-in-out;
-  transform-origin: left;
-}
-
-.working-hours p:hover {
-  color: rgb(60, 60, 140);
-  cursor: pointer;
-  transform: scale(1.03);
-}
-
-.footer-header {
-  color: rgb(41, 41, 103);
-}
-
+.contact-us p,
+.working-hours p,
 .why-us p {
   margin-top: 15px;
   font-size: 20px;
@@ -72,29 +51,44 @@ footer {
   transform-origin: left;
 }
 
+.contact-us p:hover,
+.working-hours p:hover,
 .why-us p:hover {
   color: rgb(60, 60, 140);
   cursor: pointer;
   transform: scale(1.03);
 }
 
-.footer-bottom {
-  width: 100%;
-  border: solid lightgray 1px;
-  justify-content: center;
-  height: auto;
-  background-color: rgb(238, 238, 238);
-  margin-top: -40px;
+.footer-header {
+  color: rgb(41, 41, 103);
+  margin-bottom: 10px;
 }
 
-.copyright{
+.footer-bottom {
+  width: 100%;
+  border-top: 1px solid lightgray;
+  background-color: rgb(238, 238, 238);
+  margin-top: 1.5rem;
   display: flex;
   justify-content: center;
-  padding: 8px;
+  padding: 16px 0;
+}
+
+.copyright {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.footer-legal-links {
+  display: flex;
+  gap: 25px;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .footer-legal-links span {
-  margin-left: 25px;
   cursor: pointer;
   transition: color 0.2s ease-in-out;
 }

@@ -2,10 +2,10 @@ import React, { useState, useEffect } from "react";
 import "./Footer.css";
 
 const logos = [
-  "public/media/michelin.png",
-  "public/media/oil.png",
-  "public/media/sheliko.png",
-  "public/media/vartunia.png",
+  "./public/media/michelin.png",
+  "./public/media/oil.png",
+  "./public/media/sheliko.png",
+  "./public/media/vartunia.png",
 ];
 
 export default function Footer() {
