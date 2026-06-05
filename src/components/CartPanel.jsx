@@ -5,10 +5,10 @@ export default function CartPanel({ isOpen, onClose, cartItems, onUpdateQty, onR
 
   return (
     <>
-      {/* The dark background behind the menu */}
+      {}
       <div className="cart-backdrop" onClick={onClose} />
       
-      {/* The actual sliding panel */}
+      {}
       <aside className="cart-panel">
         <div className="cart-panel-header">
           <h2>Your Cart</h2>
