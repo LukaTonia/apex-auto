@@ -386,6 +386,11 @@ body {
   cursor: pointer;
 }
 
+.promocode-input {
+  padding: 7px;
+  border-radius: 15px;
+}
+
 /* ── SLIDER ARROW BUTTONS ── */
 .slider-arrow-btn {
   width: 40px;
