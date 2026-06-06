@@ -1,3 +1,5 @@
+import React, { useState } from "react";
+
 export default function CartPanel({
   isOpen,
   onClose,
@@ -5,12 +7,19 @@ export default function CartPanel({
   onUpdateQty,
   onRemove,
 }) {
+  const [promocodeValue, setPromocodeValue] = useState("");
+  const [appliedPromocode, setAppliedPromocode] = useState("");
+
   if (!isOpen) return null; // If it's not open, draw nothing!
 
   let cartTotal = cartItems.reduce(
     (sum, item) => sum + item.price * item.quantity,
     0,
   );
+
+  if (appliedPromocode.toUpperCase() === "APEX20") {
+    cartTotal = cartTotal - cartTotal * 0.2;
+  }
 
   return (
     <>
@@ -74,13 +83,22 @@ export default function CartPanel({
               justifyContent: "space-between",
               marginBottom: "15px",
               fontSize: "20px",
+              alignItems: "center",
             }}
           >
             <input
               type="text"
               placeholder="Enter Promocode"
               className="promocode-input"
+              value={promocodeValue}
+              onChange={(e) => setPromocodeValue(e.target.value)}
             />
+            <button
+              className="promocode-button"
+              onClick={() => setAppliedPromocode(promocodeValue)}
+            >
+              Submit
+            </button>
             <span>Total:</span>
             <strong>&#8382;{cartTotal.toFixed(2)}</strong>
           </div>
