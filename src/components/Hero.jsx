@@ -11,7 +11,7 @@ export default function Hero() {
       setSlideIndex((prevIndex) => (prevIndex + 1) % photos.length);
     }, 3000);
     return () => clearInterval(timer);
-  }, []);
+  }, [photos.length]);
 
   // Manual click logic
   const nextSlide = () => setSlideIndex((prevIndex) => (prevIndex + 1) % photos.length);
@@ -20,9 +20,15 @@ export default function Hero() {
   return (
     <section className="hero-section">
       {/* main Slider */}
-      <div className="hero-slider" style={{ position: 'relative' }}>
-        <img src={photos[slideIndex]} alt="Promotional Slider" />
-        
+      <div className="hero-slider">
+  {photos.map((img, index) => (
+    <img 
+      key={index} 
+      src={img} 
+      className={`hero-slide ${index === slideIndex ? 'active' : ''}`} 
+      alt={`Slide ${index + 1}`}
+    />
+  ))}
         {/* Floating Arrows on top of the image */}
         <button 
           onClick={prevSlide} 
