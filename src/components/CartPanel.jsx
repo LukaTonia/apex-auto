@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-
+import './CartPanel.css';
 export default function CartPanel({
   isOpen,
   onClose,
@@ -10,7 +10,7 @@ export default function CartPanel({
   const [promocodeValue, setPromocodeValue] = useState("");
   const [appliedPromocode, setAppliedPromocode] = useState("");
 
-  if (!isOpen) return null; // If it's not open, draw nothing!
+  if (!isOpen) return null; // If its not open, draw nothing!
 
   let cartTotal = cartItems.reduce(
     (sum, item) => sum + item.price * item.quantity,

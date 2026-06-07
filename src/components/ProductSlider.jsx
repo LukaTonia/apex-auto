@@ -1,12 +1,12 @@
 import { useRef } from 'react';
 import ProductCard from './ProductCard';
+import './ProductSlider.css';
 
 export default function ProductSlider({ title, items, addToCart }) {
   const sliderRef = useRef(null);
 
   const scroll = (direction) => {
     if (sliderRef.current) {
-      // FIX: This simple 1-line check prevents the 'const' error!
       const scrollAmount = direction === 'left' ? -300 : 300;
       sliderRef.current.scrollBy({ left: scrollAmount, behavior: 'smooth' });
     }

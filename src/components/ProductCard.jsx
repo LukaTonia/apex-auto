@@ -1,3 +1,4 @@
+import './ProductCard.css';
 export default function ProductCard({ product, onAddToCart }) {
   return (
     <div className="product-card">

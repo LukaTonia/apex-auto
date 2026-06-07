@@ -1,3 +1,4 @@
+import './Header.css';
 export default function Header({ cartCount, onCartOpen, searchQuery, setSearchQuery }) {
   return (
     <header className="site-header">
