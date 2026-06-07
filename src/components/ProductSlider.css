@@ -47,3 +47,32 @@
   background: var(--border-color);
   transform: scale(1.05);
 }
+
+@media (max-width: 768px) {
+  .slider-section {
+    margin: 20px auto;
+    padding: 0 15px;
+  }
+
+  .slider-header {
+    margin-bottom: 15px;
+  }
+
+  .slider-header h2 {
+    font-size: 20px;
+  }
+
+  .slider-arrow-btn {
+    width: 32px;
+    height: 32px;
+  }
+
+  .slider-arrow-btn svg {
+    width: 18px;
+    height: 18px;
+  }
+
+  .horizontal-scroll {
+    gap: 15px;
+  }
+}

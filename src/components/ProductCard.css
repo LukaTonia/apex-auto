@@ -80,3 +80,34 @@
 .btn-add-cart:hover {
   background: var(--brand-hover);
 }
+
+@media (max-width: 768px) {
+  .product-card {
+    flex: 0 0 220px;
+    min-width: 220px;
+  }
+
+  .product-image-wrap {
+    height: 160px;
+    padding: 10px;
+  }
+
+  .product-body {
+    padding: 12px;
+  }
+
+  .product-title {
+    font-size: 14px;
+    margin-bottom: 8px;
+  }
+
+  .product-price {
+    font-size: 18px;
+  }
+
+  .btn-add-cart {
+    padding: 10px;
+    font-size: 14px;
+    margin-top: 10px;
+  }
+}
