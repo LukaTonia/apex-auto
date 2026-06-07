@@ -86,3 +86,80 @@ footer .footer-components {
 .footer-legal-links span:hover {
   color: rgb(60, 60, 140);
 }
+
+@media (max-width: 1180px) {
+  footer .footer-components {
+    flex-direction: column;
+    gap: 40px;
+    text-align: center;
+    padding: 10px;
+  }
+
+  .contact-us,
+  .working-hours,
+  .why-us {
+    min-width: 100%;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .contact-us p,
+  .working-hours p,
+  .why-us p {
+    margin-top: 10px;
+    transform-origin: center;
+  }
+
+  .footer-legal-links {
+    font-size: 14px;
+  }
+
+  .footer-bottom {
+    padding: 15px;
+    text-align: center;
+  }
+}
+
+@media (max-width: 768px) {
+  footer .footer-components {
+    flex-direction: column;
+    gap: 40px;
+    text-align: center;
+    padding: 10px;
+  }
+
+  .Logo {
+    width: 150px;
+    height: 150px;
+  }
+
+  .contact-us,
+  .working-hours,
+  .why-us {
+    min-width: 100%;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .contact-us p,
+  .working-hours p,
+  .why-us p {
+    font-size: 16px;
+    margin-top: 10px;
+    transform-origin: center;
+  }
+
+  .footer-legal-links {
+    gap: 15px;
+    font-size: 14px;
+  }
+
+  .footer-bottom {
+    padding: 15px;
+    text-align: center;
+  }
+}
