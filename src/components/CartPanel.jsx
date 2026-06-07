@@ -172,15 +172,7 @@ export default function CartPanel(props) {
           <div className="cart-panel-footer">
             {!isCheckoutMode && (
               <>
-                <div
-                  style={{
-                    display: "flex",
-                    justifyContent: "space-between",
-                    marginBottom: "15px",
-                    fontSize: "20px",
-                    alignItems: "center",
-                  }}
-                >
+                <div className="cart-footer-totals">
                   <input
                     type="text"
                     placeholder="Enter Promocode"
