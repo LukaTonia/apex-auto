@@ -24,11 +24,7 @@ export default function Header({ cartCount, onCartOpen, searchQuery, setSearchQu
             {cartCount > 0 && <span className="cart-badge">{cartCount}</span>}
           </div>
 
-          {/* Login Button */}
-          <a href="./login.html" className="login-btn">
-            <img src="./media/login.svg" alt="Login icon" />
-            <span>Log In</span>
-          </a>
+          
         </div>
       </div>
     </header>
