@@ -28,7 +28,7 @@
 .search-input {
   width: 100%;
   padding: 15px 20px;
-  border: 2px solid var(--border-color);
+  border: 2px solid var(--brand-blue);
   border-radius: 999px;
   background: var(--bg-gray);
   font-size: 16px;
@@ -59,6 +59,7 @@
   background: var(--bg-gray);
   border-radius: 50%;
   transition: 0.2s;
+  border: solid 2px var(--brand-blue);
 }
 
 .cart-wrapper:hover {
