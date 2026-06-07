@@ -105,3 +105,32 @@
 .login-btn img {
   width: 20px;
 }
+
+@media (max-width: 768px) {
+  .header-inner {
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 10px 15px;
+    gap: 15px;
+  }
+
+  .logo {
+    width: 160px;
+  }
+
+  .search-wrap {
+    order: 3;
+    width: 100%;
+    flex: 1 1 100%;
+  }
+
+  .search-input {
+    padding: 12px 15px;
+    font-size: 14px;
+  }
+
+  .cart-wrapper {
+    width: 45px;
+    height: 45px;
+  }
+}
