@@ -1,14 +1,13 @@
 import React, { useState } from "react";
-import './CartPanel.css';
+import "./CartPanel.css";
 
 export default function CartPanel(props) {
-
   var isOpen = props.isOpen;
   var onClose = props.onClose;
   var cartItems = props.cartItems;
   var onUpdateQty = props.onUpdateQty;
   var onRemove = props.onRemove;
-  console.log('CartPanel render, items=', cartItems && cartItems.length);
+  console.log("CartPanel render, items=", cartItems && cartItems.length);
   const [promocodeValue, setPromocodeValue] = useState("");
   const [appliedPromocode, setAppliedPromocode] = useState("");
   const [promoMessage, setPromoMessage] = useState("");
@@ -27,7 +26,6 @@ export default function CartPanel(props) {
     cartTotal = cartTotal - cartTotal * 0.2;
   }
 
-  
   const handleApplyPromocode = () => {
     const trimmedCode = promocodeValue.trim();
     if (!trimmedCode) {
@@ -52,9 +50,9 @@ export default function CartPanel(props) {
 
   const handleClose = () => {
     // junior: extra log
-    console.log('handleClose called');
+    console.log("handleClose called");
     onClose();
-   
+
     setTimeout(() => {
       setIsCheckoutMode(false);
       setOrderComplete(false);
@@ -73,12 +71,19 @@ export default function CartPanel(props) {
     bodyContent = (
       <div className="success-message">
         <h3>Your order has been accepted!</h3>
-        <p>Thank you for shopping with us. You will pay the courier upon delivery.</p>
+        <p>
+          Thank you for shopping with us, courier will contact you. You will pay
+          the courier upon delivery.
+        </p>
       </div>
     );
   } else if (isCheckoutMode) {
     bodyContent = (
-      <form id="checkout-form" className="checkout-form" onSubmit={handleCheckoutSubmit}>
+      <form
+        id="checkout-form"
+        className="checkout-form"
+        onSubmit={handleCheckoutSubmit}
+      >
         <input type="text" placeholder="First Name" required />
         <input type="text" placeholder="Surname" required />
         <input type="tel" placeholder="Phone Number" required />
@@ -87,7 +92,13 @@ export default function CartPanel(props) {
         <input type="text" placeholder="Street Address" required />
 
         <div className="payment-option">
-          <input type="radio" id="pay-courier" name="payment" required defaultChecked />
+          <input
+            type="radio"
+            id="pay-courier"
+            name="payment"
+            required
+            defaultChecked
+          />
           <label htmlFor="pay-courier">Pay price to the courier</label>
         </div>
 
@@ -107,9 +118,13 @@ export default function CartPanel(props) {
             <div className="cart-line-info">
               <strong>{item.name}</strong>
               <div className="cart-qty-row">
-                <button onClick={() => onUpdateQty(item.id, item.quantity - 1)}>−</button>
+                <button onClick={() => onUpdateQty(item.id, item.quantity - 1)}>
+                  −
+                </button>
                 <span>{item.quantity}</span>
-                <button onClick={() => onUpdateQty(item.id, item.quantity + 1)}>+</button>
+                <button onClick={() => onUpdateQty(item.id, item.quantity + 1)}>
+                  +
+                </button>
                 <button
                   style={{ color: "red", border: "none", background: "none" }}
                   onClick={() => onRemove(item.id)}
@@ -128,7 +143,12 @@ export default function CartPanel(props) {
   let footerButton = null;
   if (!isCheckoutMode) {
     footerButton = (
-      <button className="btn-checkout" type="button" onClick={() => setIsCheckoutMode(true)} disabled={cartItems.length === 0}>
+      <button
+        className="btn-checkout"
+        type="button"
+        onClick={() => setIsCheckoutMode(true)}
+        disabled={cartItems.length === 0}
+      >
         Go to Checkout
       </button>
     );
@@ -152,7 +172,15 @@ export default function CartPanel(props) {
           <div className="cart-panel-footer">
             {!isCheckoutMode && (
               <>
-                <div style={{ display: "flex", justifyContent: "space-between", marginBottom: "15px", fontSize: "20px", alignItems: "center" }}>
+                <div
+                  style={{
+                    display: "flex",
+                    justifyContent: "space-between",
+                    marginBottom: "15px",
+                    fontSize: "20px",
+                    alignItems: "center",
+                  }}
+                >
                   <input
                     type="text"
                     placeholder="Enter Promocode"
@@ -163,13 +191,19 @@ export default function CartPanel(props) {
                       setPromoMessage("");
                     }}
                   />
-                  <button type="button" className="promocode-button" onClick={handleApplyPromocode}>
+                  <button
+                    type="button"
+                    className="promocode-button"
+                    onClick={handleApplyPromocode}
+                  >
                     Submit
                   </button>
                   <span>Total:</span>
                   <strong>&#8382;{cartTotal.toFixed(2)}</strong>
                 </div>
-                {promoMessage && <div className="promo-message">{promoMessage}</div>}
+                {promoMessage && (
+                  <div className="promo-message">{promoMessage}</div>
+                )}
               </>
             )}
 
