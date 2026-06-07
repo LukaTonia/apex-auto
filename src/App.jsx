@@ -6,7 +6,7 @@ import Hero from './components/Hero.jsx';
 import ProductSlider from './components/ProductSlider.jsx';
 import CartPanel from './components/CartPanel.jsx';
 import Footer from './components/Footer.jsx';
-import ProductCard from './components/ProductCard.jsx'; // this is  used  for search results
+import ProductCard from './components/ProductCard.jsx'; 
 
 function App() {
   const [cart, setCart] = useState([]);
@@ -15,23 +15,24 @@ function App() {
   //  SEARCH LOGIC
   const [searchQuery, setSearchQuery] = useState('');
 
-  const handleAddToCart = (product) => {
-    setCart((prevCart) => {
-      const existingItem = prevCart.find(item => item.id === product.id);
+  function handleAddToCart(product) {
+    console.log('handleAddToCart', product && product.id);
+    setCart(function(prevCart) {
+      var existingItem = prevCart.find(function(item){ return item.id === product.id; });
       if (existingItem) {
-        return prevCart.map(item => item.id === product.id ? { ...item, quantity: item.quantity + 1 } : item);
+        return prevCart.map(function(item){ if (item.id === product.id) { return { ...item, quantity: item.quantity + 1 }; } return item; });
       }
-      return [...prevCart, { ...product, quantity: 1 }];
+      return prevCart.concat([{ ...product, quantity: 1 }]);
     });
     setIsCartOpen(true);
-  };
+  }
 
-  const updateQuantity = (id, newQty) => {
+  function updateQuantity(id, newQty) {
     if (newQty < 1) return;
-    setCart(cart.map(item => item.id === id ? { ...item, quantity: newQty } : item));
-  };
+    setCart(cart.map(function(item){ if (item.id === id) { return { ...item, quantity: newQty }; } return item; }));
+  }
 
-  const removeItem = (id) => setCart(cart.filter(item => item.id !== id));
+  function removeItem(id) { return setCart(cart.filter(function(item){ return item.id !== id; })); }
   const cartCount = cart.reduce((total, item) => total + item.quantity, 0);
 
   // საიტის დატა
@@ -106,53 +107,67 @@ function App() {
 
       <main>
         {}
-        {searchQuery.length > 0 ? (
-          <div className="search-results-section">
-            <h2>Search Results for "{searchQuery}"</h2>
-            {filteredProducts.length === 0 ? (
-              <p style={{marginTop: '10px'}}>No products found. Try a different search term.</p>
-            ) : (
-              <div className="search-results-grid">
-                {filteredProducts.map(product => (
-                  <ProductCard key={product.id} product={product} onAddToCart={handleAddToCart} />
-                ))}
-              </div>
-            )}
-          </div>
-        ) : (
-            
-            <>
-            
-            <Hero />
-            
-            <ProductSlider 
-              title="Tires" 
-              items={allProducts.filter(p => p.section === "Tires")} 
-              addToCart={handleAddToCart} 
-            />
-            
-            <ProductSlider 
-              title="Batteries" 
-              items={allProducts.filter(p => p.section === "Batteries")} 
-              addToCart={handleAddToCart} 
-              />
-              <ProductSlider 
-              title="Engine Oils" 
-              items={allProducts.filter(p => p.section === "Engine Oil")} 
-              addToCart={handleAddToCart} 
-              />
-              <ProductSlider 
-              title="Brake Pads" 
-              items={allProducts.filter(p => p.section === "Brake Pads")} 
-              addToCart={handleAddToCart} 
-              />
-               <ProductSlider 
-              title="Brake Discs" 
-              items={allProducts.filter(p => p.section === "Brake Discs")} 
-              addToCart={handleAddToCart} 
-            />
-          </>
-        )}
+        {
+          (() => {
+            if (searchQuery.length > 0) {
+              let searchBody = null;
+              if (filteredProducts.length === 0) {
+                searchBody = <p style={{marginTop: '10px'}}>No products found. Try a different search term.</p>;
+              } else {
+                searchBody = (
+                  <div className="search-results-grid">
+                    {filteredProducts.map(product => (
+                      <ProductCard key={product.id} product={product} onAddToCart={handleAddToCart} />
+                    ))}
+                  </div>
+                );
+              }
+
+              return (
+                <div className="search-results-section">
+                  <h2>Search Results for "{searchQuery}"</h2>
+                  {searchBody}
+                </div>
+              );
+            }
+
+            return (
+              <>
+                <Hero />
+
+                <ProductSlider 
+                  title="Tires" 
+                  items={allProducts.filter(p => p.section === "Tires")} 
+                  addToCart={handleAddToCart} 
+                />
+
+                <ProductSlider 
+                  title="Batteries" 
+                  items={allProducts.filter(p => p.section === "Batteries")} 
+                  addToCart={handleAddToCart} 
+                />
+
+                <ProductSlider 
+                  title="Engine Oils" 
+                  items={allProducts.filter(p => p.section === "Engine Oil")} 
+                  addToCart={handleAddToCart} 
+                />
+
+                <ProductSlider 
+                  title="Brake Pads" 
+                  items={allProducts.filter(p => p.section === "Brake Pads")} 
+                  addToCart={handleAddToCart} 
+                />
+
+                <ProductSlider 
+                  title="Brake Discs" 
+                  items={allProducts.filter(p => p.section === "Brake Discs")} 
+                  addToCart={handleAddToCart} 
+                />
+              </>
+            );
+          })()
+        }
       </main>
 
       <Footer />

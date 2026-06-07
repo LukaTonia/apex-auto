@@ -1,5 +1,10 @@
 import './Header.css';
-export default function Header({ cartCount, onCartOpen, searchQuery, setSearchQuery }) {
+
+export default function Header(props) {
+  
+  console.log('Header render, cartCount=', props.cartCount);
+  var debug = true;
+
   return (
     <header className="site-header">
       <div className="header-inner">
@@ -13,19 +18,18 @@ export default function Header({ cartCount, onCartOpen, searchQuery, setSearchQu
             type="text"
             className="search-input"
             placeholder="Search tires, batteries, engine oil, etc..."
-            value={searchQuery}
-            onChange={(e) => setSearchQuery(e.target.value)}
+            value={props.searchQuery}
+            onChange={function(e) { console.log('search input', e.target.value); props.setSearchQuery(e.target.value); }}
           />
         </div>
 
         <div className="header-actions">
           {/*  Cart */}
-          <div className="cart-wrapper" onClick={onCartOpen}>
+          <div className="cart-wrapper" onClick={function(){ if(debug) console.log('cart clicked'); props.onCartOpen(); }}>
             <img src="./media/cart.svg" alt="Cart" />
-            {cartCount > 0 && <span className="cart-badge">{cartCount}</span>}
+            {props.cartCount > 0 && <span className="cart-badge">{props.cartCount}</span>}
           </div>
 
-          
         </div>
       </div>
     </header>

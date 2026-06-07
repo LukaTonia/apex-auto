@@ -5,7 +5,6 @@ export default function Hero() {
   const photos = ['./media/slider1.png', './media/slider2.png', './media/slider3.png', './media/slider4.png', './media/slider5.png', './media/slider6.png'];
   const [slideIndex, setSlideIndex] = useState(0);
 
-  // Auto-slide logic
   useEffect(() => {
     const timer = setInterval(() => {
       setSlideIndex((prevIndex) => (prevIndex + 1) % photos.length);
@@ -13,23 +12,32 @@ export default function Hero() {
     return () => clearInterval(timer);
   }, [photos.length]);
 
-  // Manual click logic
-  const nextSlide = () => setSlideIndex((prevIndex) => (prevIndex + 1) % photos.length);
-  const prevSlide = () => setSlideIndex((prevIndex) => (prevIndex - 1 + photos.length) % photos.length);
+ 
+  function nextSlide() { setSlideIndex(function(prevIndex){ return (prevIndex + 1) % photos.length; }); }
+  function prevSlide() { setSlideIndex(function(prevIndex){ return (prevIndex - 1 + photos.length) % photos.length; }); }
+
+  console.log('Hero render, slideIndex=', slideIndex);
 
   return (
     <section className="hero-section">
       {/* main Slider */}
       <div className="hero-slider">
-  {photos.map((img, index) => (
-    <img 
-      key={index} 
-      src={img} 
-      className={`hero-slide ${index === slideIndex ? 'active' : ''}`} 
-      alt={`Slide ${index + 1}`}
-    />
-  ))}
-        {/* Floating Arrows on top of the image */}
+  {photos.map((img, index) => {
+    let slideClass = 'hero-slide';
+    if (index === slideIndex) {
+      slideClass += ' active';
+    }
+
+    return (
+      <img
+        key={index}
+        src={img}
+        className={slideClass}
+        alt={`Slide ${index + 1}`}
+      />
+    );
+  })}
+       
         <button 
           onClick={prevSlide} 
           className="slider-arrow-btn" 

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./Footer.css";
 
-const logos = [
+var logos = [
   "./public/media/michelin.png",
   "./public/media/oil.png",
   "./public/media/sheliko.png",
@@ -9,14 +9,15 @@ const logos = [
 ];
 
 export default function Footer() {
+  console.log('Footer render');
   const [index, setIndex] = useState(0);
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setIndex((prevIndex) => (prevIndex + 1) % logos.length);
+  useEffect(function() {
+    var interval = setInterval(function() {
+      setIndex(function(prevIndex) { return (prevIndex + 1) % logos.length; });
     }, 2000);
 
-    return () => clearInterval(interval);
+    return function() { clearInterval(interval); };
   }, []);
 
   return (

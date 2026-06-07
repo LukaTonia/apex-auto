@@ -2,15 +2,21 @@ import { useRef } from 'react';
 import ProductCard from './ProductCard';
 import './ProductSlider.css';
 
-export default function ProductSlider({ title, items, addToCart }) {
+export default function ProductSlider(props) {
+  var title = props.title;
+  var items = props.items;
+  var addToCart = props.addToCart;
   const sliderRef = useRef(null);
 
-  const scroll = (direction) => {
+  function scroll(direction) {
     if (sliderRef.current) {
-      const scrollAmount = direction === 'left' ? -300 : 300;
+      var scrollAmount = 300;
+      if (direction === 'left') {
+        scrollAmount = -300;
+      }
       sliderRef.current.scrollBy({ left: scrollAmount, behavior: 'smooth' });
     }
-  };
+  }
 
   if (items.length === 0) return null;
 
