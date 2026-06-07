@@ -11,7 +11,7 @@ export default function Header({ cartCount, onCartOpen, searchQuery, setSearchQu
           <input
             type="text"
             className="search-input"
-            placeholder="Search tires, batteries, oil, etc..."
+            placeholder="Search tires, batteries, engine oil, etc..."
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
           />
