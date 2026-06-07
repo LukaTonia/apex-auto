@@ -11,6 +11,7 @@
   --danger: #ef4444;
   --radius: 12px;
   --shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  --price-color: #f66b14;
 }
 
 * {
@@ -275,7 +276,7 @@ body {
   font-size: 22px;
   font-weight: bold;
   margin: 0;
-  color: var(--success);
+  color: var(--price-color);
 }
 .btn-add-cart {
   margin-top: 15px;
