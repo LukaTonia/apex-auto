@@ -10,8 +10,8 @@ export default function CartPanel({
 }) {
   const [promocodeValue, setPromocodeValue] = useState("");
   const [appliedPromocode, setAppliedPromocode] = useState("");
-  
-  
+  const [promoMessage, setPromoMessage] = useState("");
+
   const [isCheckoutMode, setIsCheckoutMode] = useState(false);
   const [orderComplete, setOrderComplete] = useState(false);
 
@@ -27,9 +27,26 @@ export default function CartPanel({
   }
 
   
+  const handleApplyPromocode = () => {
+    const trimmedCode = promocodeValue.trim();
+    if (!trimmedCode) {
+      setPromoMessage("Please enter a promocode.");
+      setAppliedPromocode("");
+      return;
+    }
+
+    setAppliedPromocode(trimmedCode);
+    setPromoMessage(
+      trimmedCode.toUpperCase() === "APEX20"
+        ? "Promocode applied."
+        : "Promocode not valid."
+    );
+  };
+
   const handleCheckoutSubmit = (e) => {
-    e.preventDefault(); 
-    setOrderComplete(true); 
+    e.preventDefault();
+    setIsCheckoutMode(false);
+    setOrderComplete(true);
   };
 
   const handleClose = () => {
@@ -76,6 +93,10 @@ export default function CartPanel({
                 <input type="radio" id="pay-courier" name="payment" required defaultChecked />
                 <label htmlFor="pay-courier">Pay price to the courier</label>
               </div>
+
+              <button type="submit" className="btn-checkout">
+                Submit Order (&#8382;{cartTotal.toFixed(2)})
+              </button>
             </form>
 
        
@@ -109,29 +130,30 @@ export default function CartPanel({
         {!orderComplete && (
           <div className="cart-panel-footer">
             {!isCheckoutMode && (
-              <div style={{ display: "flex", justifyContent: "space-between", marginBottom: "15px", fontSize: "20px", alignItems: "center" }}>
-                <input
-                  type="text"
-                  placeholder="Enter Promocode"
-                  className="promocode-input"
-                  value={promocodeValue}
-                  onChange={(e) => setPromocodeValue(e.target.value)}
-                />
-                <button className="promocode-button" onClick={() => setAppliedPromocode(promocodeValue)}>
-                  Submit
-                </button>
-                <span>Total:</span>
-                <strong>&#8382;{cartTotal.toFixed(2)}</strong>
-              </div>
+              <>
+                <div style={{ display: "flex", justifyContent: "space-between", marginBottom: "15px", fontSize: "20px", alignItems: "center" }}>
+                  <input
+                    type="text"
+                    placeholder="Enter Promocode"
+                    className="promocode-input"
+                    value={promocodeValue}
+                    onChange={(e) => {
+                      setPromocodeValue(e.target.value);
+                      setPromoMessage("");
+                    }}
+                  />
+                  <button type="button" className="promocode-button" onClick={handleApplyPromocode}>
+                    Submit
+                  </button>
+                  <span>Total:</span>
+                  <strong>&#8382;{cartTotal.toFixed(2)}</strong>
+                </div>
+                {promoMessage && <div className="promo-message">{promoMessage}</div>}
+              </>
             )}
             
-            
-            {isCheckoutMode ? (
-              <button form="checkout-form" type="submit" className="btn-checkout">
-                Submit Order (&#8382;{cartTotal.toFixed(2)})
-              </button>
-            ) : (
-              <button className="btn-checkout" onClick={() => setIsCheckoutMode(true)} disabled={cartItems.length === 0}>
+            {isCheckoutMode ? null : (
+              <button className="btn-checkout" type="button" onClick={() => setIsCheckoutMode(true)} disabled={cartItems.length === 0}>
                 Go to Checkout
               </button>
             )}

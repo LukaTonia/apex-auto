@@ -173,3 +173,13 @@
   color: var(--success);
   font-size: 24px;
 }
+.promo-message {
+  background: rgba(22, 163, 74, 0.1);
+  border: 1px solid var(--success);
+  color: var(--success);
+  padding: 10px;
+  border-radius: 8px;
+  text-align: center;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
