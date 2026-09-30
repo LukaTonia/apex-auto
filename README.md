@@ -8,7 +8,7 @@ Apex Auto is a responsive, reactive React application designed to simulate a mod
 ### 👨‍💻 Authors
 
 - **Luka Tonia** — [GitHub Profile](https://github.com/LukaTonia)
-- **Levan Japaridze** — [GitHub Profile](https://github.com/Japo8)
+- **Levan Japaridze** — [GitHub Profile](https://github.com/Japo024)
 
 ---
 
